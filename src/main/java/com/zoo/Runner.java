@@ -19,7 +19,7 @@ public class Runner {
     object.add(dog);
     object.add(parrot);
     for (Animal animal : object) {
-      animal.toString();
+      System.out.println(animal);
       animal.go();
     }
   }

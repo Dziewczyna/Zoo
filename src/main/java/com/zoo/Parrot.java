@@ -1,16 +1,16 @@
 package com.zoo;
 
-public class Parrot implements Animal {
-  private final String name;
+public class Parrot extends Animal {
   private final String colour;
   private final String breed;
 
   public Parrot(String name, String colour, String breed) {
-    this.name = name;
+    super(name);
     this.colour = colour;
     this.breed = breed;
   }
 
+  @Override
   public void go() {
     System.out.println("Parrot is flying!");
   }
@@ -23,6 +23,7 @@ public class Parrot implements Animal {
     System.out.println("Chodzenie i mówienie");
   }
 
+  @Override
   public String toString() {
     return "Wabię się "
         + name

@@ -1,5 +1,11 @@
 package com.zoo;
 
-public interface Animal {
-  default void go() {}
+public class Animal {
+  protected String name;
+
+  public Animal(String name) {
+    this.name = name;
+  }
+
+  void go() {}
 }
