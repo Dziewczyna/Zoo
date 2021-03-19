@@ -1,5 +1,7 @@
 package com.zoo;
 
+import com.zoo.hen.EggCounter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +15,10 @@ public class Runner {
 
     Parrot parrot = new Parrot("Felix", "kolorowy", "falista");
     parrot.go();
+
+    EggCounter eggCounter = new EggCounter("Felix", "kolorowy", "falista");
+    eggCounter.layEggs(4);
+    System.out.println(eggCounter.getEggCounter());
 
     List<Animal> object = new ArrayList<>();
     object.add(cat);
