@@ -2,7 +2,7 @@ package com.zoo.hen;
 
 import java.util.List;
 
-public class EggCounter extends Hen {
+public class EggCounter extends HenDecorator {
   private int eggCounter = 0;
 
   public EggCounter(String name, String colour, String breed) {
@@ -11,13 +11,14 @@ public class EggCounter extends Hen {
 
   @Override
   public String layEgg() {
-    eggCounter += 1;
+    int tmpEggCounter = eggCounter + 1;
     return super.layEgg();
   }
 
   @Override
   public List<String> layEggs(int nrOfEggs) {
     eggCounter += nrOfEggs;
+    System.out.println("Laid " + nrOfEggs + " eggs");
     return super.layEggs(nrOfEggs);
   }
 

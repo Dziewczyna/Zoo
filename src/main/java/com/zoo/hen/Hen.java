@@ -3,7 +3,7 @@ package com.zoo.hen;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Hen {
+public abstract class Hen {
   private final String name;
   private final String colour;
   private final String breed;
@@ -14,15 +14,17 @@ public class Hen {
     this.breed = breed;
   }
 
-  public String layEgg(){
+  public String layEgg() {
     return "laid 1 egg";
   }
 
-  public List<String> layEggs(int nrOfEggs){
+  public List<String> layEggs(int nrOfEggs) {
     List<String> laidEggs = new ArrayList<>();
-    for (int i = 0; i < nrOfEggs; i++){
+    for (int i = 0; i < nrOfEggs; i++) {
       laidEggs.add(layEgg());
     }
     return laidEggs;
   }
+
+  public abstract int getEggCounter();
 }
